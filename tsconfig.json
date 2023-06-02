@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "useUnknownInCatchVariables": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "",
+    "paths": {
+      "@contracts/*": ["src/contracts/*"]
+    },
+    "types": ["node", "@types/node", "@types/chai", "@types/mocha"],
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "include": ["**/*.ts", "./src/scripts"],
+  "files": ["./hardhat.config.ts"],
+  "exclude": ["node_modules", "build", "cache", "artifacts"]
+}

@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      // Allows for the parsing of JSX
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "cache",
+    "client",
+    ".env.local",
+    ".env.development.local",
+    ".env.test.local",
+    ".env.production.local",
+    ".vscode/",
+    "src/artifacts",
+    "yarn.lock"
+  ],
+  "extends": ["plugin:prettier/recommended", "prettier", "plugin:react-hooks/recommended"],
+  "plugins": ["simple-import-sort", "unused-imports", "react-hooks"],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "object-shorthand": ["error", "always"],
+    "no-restricted-imports": ["error"],
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
